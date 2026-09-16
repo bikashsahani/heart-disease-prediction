@@ -8,7 +8,7 @@ import json
 # loaded with joblib.load() -- pickle.load() on the scaler raises
 # "UnpicklingError: STACK_GLOBAL requires str" because joblib's serialization
 # format isn't a plain pickle stream.
-model = joblib.load("heart_disease_model.pkl")
+model = joblib.load("AdaBoost_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
 with open("selected_features.json") as f:
@@ -106,3 +106,5 @@ if st.button("Predict"):
     else:
         st.success(f"✅ The model predicts this person **does not have** heart disease. "
                     f"(Predicted probability of disease: {probability:.1%})")
+
+
